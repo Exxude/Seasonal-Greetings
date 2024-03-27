@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    }
+  ],
+  "result": {
+    "item": "seasonal_greetings:easter_egg_golden"
+  }
+}

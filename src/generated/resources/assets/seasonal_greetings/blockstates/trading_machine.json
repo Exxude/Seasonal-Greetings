@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "seasonal_greetings:block/trading_machine",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "seasonal_greetings:block/trading_machine"
+    },
+    "facing=south": {
+      "model": "seasonal_greetings:block/trading_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "seasonal_greetings:block/trading_machine",
+      "y": 270
+    }
+  }
+}

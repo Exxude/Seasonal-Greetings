@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_easter_egg_wild": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "seasonal_greetings:easter_eggs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:any_to_easter_egg_wild"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_easter_egg_wild",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:any_to_easter_egg_wild"
+    ]
+  },
+  "sends_telemetry_event": false
+}

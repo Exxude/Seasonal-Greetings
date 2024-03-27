@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:emerald"
+  },
+  "base": {
+    "item": "seasonal_greetings:trading_machine_template"
+  },
+  "result": {
+    "item": "seasonal_greetings:trading_machine"
+  },
+  "template": {
+    "item": "minecraft:iron_block"
+  }
+}

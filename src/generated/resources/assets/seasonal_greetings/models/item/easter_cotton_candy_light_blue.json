@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "seasonal_greetings:item/easter_cotton_candy_light_blue"
+  }
+}

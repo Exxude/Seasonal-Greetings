@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "seasonal_greetings:trading_machine_template"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_trading_machine_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "seasonal_greetings:trading_machine_template"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_trading_machine_template",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "seasonal_greetings:trading_machine_template"
+    ]
+  },
+  "sends_telemetry_event": false
+}

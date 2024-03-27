@@ -1,0 +1,16 @@
+{
+  "type": "seasonal_greetings:trading_machine",
+  "ingredients": [
+    {
+      "item": "seasonal_greetings:easter_egg_lime"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    }
+  ],
+  "output": {
+    "count": 6,
+    "item": "seasonal_greetings:easter_cotton_candy_lime"
+  },
+  "weight": 50
+}

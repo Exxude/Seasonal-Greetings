@@ -1,0 +1,127 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_red_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_yellow_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_orange_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_green_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_pink_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_purple_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_black_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_brown_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_white_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_lime_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_light_blue_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_cyan_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_magenta_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_light_gray_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_gray_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_blue_block"
+          },
+          "weight": 100
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_basket_wg",
+            "Properties": {
+              "facing": "north"
+            }
+          },
+          "weight": 200
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_wild_block"
+          },
+          "weight": 50
+        },
+        {
+          "data": {
+            "Name": "seasonal_greetings:easter_egg_golden_block"
+          },
+          "weight": 1
+        }
+      ]
+    }
+  }
+}

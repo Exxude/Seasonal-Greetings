@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "seasonal_greetings:block/trading_machine_side",
+    "side": "seasonal_greetings:block/trading_machine_front",
+    "top": "seasonal_greetings:block/trading_machine_top"
+  }
+}

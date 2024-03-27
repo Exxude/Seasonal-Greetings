@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "seasonal_greetings:easter_eggs"
+    },
+    {
+      "tag": "seasonal_greetings:easter_eggs"
+    },
+    {
+      "tag": "seasonal_greetings:easter_eggs"
+    },
+    {
+      "tag": "seasonal_greetings:easter_eggs"
+    },
+    {
+      "tag": "seasonal_greetings:easter_eggs"
+    }
+  ],
+  "result": {
+    "item": "seasonal_greetings:easter_egg_wild"
+  }
+}

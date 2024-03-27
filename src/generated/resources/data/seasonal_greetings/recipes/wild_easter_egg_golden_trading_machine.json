@@ -1,0 +1,15 @@
+{
+  "type": "seasonal_greetings:trading_machine",
+  "ingredients": [
+    {
+      "tag": "seasonal_greetings:easter_eggs"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_wild"
+    }
+  ],
+  "output": {
+    "item": "seasonal_greetings:easter_egg_golden"
+  },
+  "weight": 1
+}

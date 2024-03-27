@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "seasonal_greetings:block/easter_stuffed_animal_bunny",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "seasonal_greetings:block/easter_stuffed_animal_bunny"
+    },
+    "facing=south": {
+      "model": "seasonal_greetings:block/easter_stuffed_animal_bunny",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "seasonal_greetings:block/easter_stuffed_animal_bunny",
+      "y": 270
+    }
+  }
+}

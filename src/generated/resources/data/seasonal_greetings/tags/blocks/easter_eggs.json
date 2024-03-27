@@ -1,0 +1,22 @@
+{
+  "values": [
+    "seasonal_greetings:easter_egg_red_block",
+    "seasonal_greetings:easter_egg_blue_block",
+    "seasonal_greetings:easter_egg_green_block",
+    "seasonal_greetings:easter_egg_yellow_block",
+    "seasonal_greetings:easter_egg_orange_block",
+    "seasonal_greetings:easter_egg_black_block",
+    "seasonal_greetings:easter_egg_purple_block",
+    "seasonal_greetings:easter_egg_brown_block",
+    "seasonal_greetings:easter_egg_lime_block",
+    "seasonal_greetings:easter_egg_light_blue_block",
+    "seasonal_greetings:easter_egg_cyan_block",
+    "seasonal_greetings:easter_egg_white_block",
+    "seasonal_greetings:easter_egg_pink_block",
+    "seasonal_greetings:easter_egg_magenta_block",
+    "seasonal_greetings:easter_egg_light_gray_block",
+    "seasonal_greetings:easter_egg_gray_block",
+    "seasonal_greetings:easter_egg_wild_block",
+    "seasonal_greetings:easter_egg_golden_block"
+  ]
+}
