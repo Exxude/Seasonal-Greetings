@@ -49,7 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         for(int i = 0; i < EASTER_EGGS.size(); i++) {
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EASTER_EGGS.get(i), 3)
-                    .requires(EASTER_EGGS.get(i)).requires(ModBlocks.EASTER_EGG_WILD_BLOCK.get())
+                    .requires(EASTER_EGGS.get(i)).requires(ModItems.EASTER_EGG_WILD.get())
                     .unlockedBy(getHasName(EASTER_EGGS.get(i)), has(EASTER_EGGS.get(i)))
                     .save(consumer, "wild_triple_" + getItemName(EASTER_EGGS.get(i)));
         }

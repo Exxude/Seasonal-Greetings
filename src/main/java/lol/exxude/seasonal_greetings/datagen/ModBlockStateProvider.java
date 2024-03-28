@@ -21,7 +21,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.EASTER_EGG_GREEN_BLOCK, ModBlocks.EASTER_EGG_YELLOW_BLOCK, ModBlocks.EASTER_EGG_ORANGE_BLOCK, ModBlocks.EASTER_EGG_BLACK_BLOCK,
             ModBlocks.EASTER_EGG_PURPLE_BLOCK, ModBlocks.EASTER_EGG_BROWN_BLOCK, ModBlocks.EASTER_EGG_LIME_BLOCK, ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK,
             ModBlocks.EASTER_EGG_CYAN_BLOCK, ModBlocks.EASTER_EGG_WHITE_BLOCK, ModBlocks.EASTER_EGG_PINK_BLOCK, ModBlocks.EASTER_EGG_MAGENTA_BLOCK,
-            ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK, ModBlocks.EASTER_EGG_GRAY_BLOCK, ModBlocks.EASTER_EGG_WILD_BLOCK, ModBlocks.EASTER_EGG_GOLDEN_BLOCK);
+            ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK, ModBlocks.EASTER_EGG_GRAY_BLOCK, ModBlocks.EASTER_EGG_WILD_BLOCK, ModBlocks.EASTER_EGG_GOLDEN_BLOCK,
+
+            ModBlocks.EASTER_EGG_RED_BLOCK_DUAL, ModBlocks.EASTER_EGG_BLUE_BLOCK_DUAL,
+            ModBlocks.EASTER_EGG_GREEN_BLOCK_DUAL, ModBlocks.EASTER_EGG_YELLOW_BLOCK_DUAL, ModBlocks.EASTER_EGG_ORANGE_BLOCK_DUAL, ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL,
+            ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL, ModBlocks.EASTER_EGG_BROWN_BLOCK_DUAL, ModBlocks.EASTER_EGG_LIME_BLOCK_DUAL, ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK_DUAL,
+            ModBlocks.EASTER_EGG_CYAN_BLOCK_DUAL, ModBlocks.EASTER_EGG_WHITE_BLOCK_DUAL, ModBlocks.EASTER_EGG_PINK_BLOCK_DUAL, ModBlocks.EASTER_EGG_MAGENTA_BLOCK_DUAL,
+            ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK_DUAL, ModBlocks.EASTER_EGG_GRAY_BLOCK_DUAL, ModBlocks.EASTER_EGG_WILD_BLOCK_DUAL, ModBlocks.EASTER_EGG_GOLDEN_BLOCK_DUAL,
+
+            ModBlocks.EASTER_EGG_RED_BLOCK_THRICE, ModBlocks.EASTER_EGG_BLUE_BLOCK_THRICE,
+            ModBlocks.EASTER_EGG_GREEN_BLOCK_THRICE, ModBlocks.EASTER_EGG_YELLOW_BLOCK_THRICE, ModBlocks.EASTER_EGG_ORANGE_BLOCK_THRICE, ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE,
+            ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE, ModBlocks.EASTER_EGG_BROWN_BLOCK_THRICE, ModBlocks.EASTER_EGG_LIME_BLOCK_THRICE, ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK_THRICE,
+            ModBlocks.EASTER_EGG_CYAN_BLOCK_THRICE, ModBlocks.EASTER_EGG_WHITE_BLOCK_THRICE, ModBlocks.EASTER_EGG_PINK_BLOCK_THRICE, ModBlocks.EASTER_EGG_MAGENTA_BLOCK_THRICE,
+            ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK_THRICE, ModBlocks.EASTER_EGG_GRAY_BLOCK_THRICE, ModBlocks.EASTER_EGG_WILD_BLOCK_THRICE, ModBlocks.EASTER_EGG_GOLDEN_BLOCK_THRICE);
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, SeasonalGreetings.MOD_ID, exFileHelper);
@@ -31,8 +43,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         for(int i = 0; i < EASTER_EGG_BLOCKS.size(); i++) {
             int index = i;
-            simpleBlockWithItem(EASTER_EGG_BLOCKS.get(index).get(),
-                    new ModelFile.UncheckedModelFile(modLoc("block/" + EASTER_EGG_BLOCKS.get(index).getId().getPath())));
+            customBlockWithItem(EASTER_EGG_BLOCKS.get(index).get(), EASTER_EGG_BLOCKS.get(index));
         }
 
         customBlockWithItem(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get(), ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY);

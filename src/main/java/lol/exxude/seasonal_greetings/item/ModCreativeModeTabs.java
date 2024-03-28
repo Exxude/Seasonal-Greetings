@@ -66,23 +66,76 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get());
 
                         pOutput.accept(ModBlocks.EASTER_EGG_RED_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_RED_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_RED_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_BLUE_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_BLUE_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_BLUE_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_GREEN_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_GREEN_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_GREEN_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_YELLOW_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_YELLOW_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_YELLOW_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_ORANGE_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_ORANGE_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_ORANGE_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_BLACK_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_PURPLE_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_BROWN_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_BROWN_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_BROWN_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_LIME_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_LIME_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_LIME_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_CYAN_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_CYAN_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_CYAN_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_WHITE_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_WHITE_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_WHITE_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_PINK_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_PINK_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_PINK_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_MAGENTA_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_MAGENTA_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_MAGENTA_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_GRAY_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_GRAY_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_GRAY_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_WILD_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_WILD_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_WILD_BLOCK_THRICE.get());
+
                         pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK_DUAL.get());
+                        pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK_THRICE.get());
                     })
                     .build());
 

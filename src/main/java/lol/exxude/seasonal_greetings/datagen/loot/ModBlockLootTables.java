@@ -25,6 +25,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             ModBlocks.EASTER_EGG_CYAN_BLOCK.get(), ModBlocks.EASTER_EGG_WHITE_BLOCK.get(), ModBlocks.EASTER_EGG_PINK_BLOCK.get(), ModBlocks.EASTER_EGG_MAGENTA_BLOCK.get(),
             ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK.get(), ModBlocks.EASTER_EGG_GRAY_BLOCK.get(), ModBlocks.EASTER_EGG_WILD_BLOCK.get(), ModBlocks.EASTER_EGG_GOLDEN_BLOCK.get());
 
+    private static final List<Block> EASTER_EGG_BLOCKS_DUAL = List.of(ModBlocks.EASTER_EGG_RED_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_BLUE_BLOCK_DUAL.get(),
+            ModBlocks.EASTER_EGG_GREEN_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_YELLOW_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_ORANGE_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL.get(),
+            ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_BROWN_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_LIME_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK_DUAL.get(),
+            ModBlocks.EASTER_EGG_CYAN_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_WHITE_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_PINK_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_MAGENTA_BLOCK_DUAL.get(),
+            ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_GRAY_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_WILD_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_GOLDEN_BLOCK_DUAL.get());
+
+    private static final List<Block> EASTER_EGG_BLOCKS_THRICE = List.of(ModBlocks.EASTER_EGG_RED_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_BLUE_BLOCK_THRICE.get(),
+            ModBlocks.EASTER_EGG_GREEN_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_YELLOW_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_ORANGE_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE.get(),
+            ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_BROWN_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_LIME_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_LIGHT_BLUE_BLOCK_THRICE.get(),
+            ModBlocks.EASTER_EGG_CYAN_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_WHITE_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_PINK_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_MAGENTA_BLOCK_THRICE.get(),
+            ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_GRAY_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_WILD_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_GOLDEN_BLOCK_THRICE.get());
+
     private static final List<Item> EASTER_EGGS = List.of(ModItems.EASTER_EGG_RED.get(), ModItems.EASTER_EGG_BLUE.get(),
             ModItems.EASTER_EGG_GREEN.get(), ModItems.EASTER_EGG_YELLOW.get(), ModItems.EASTER_EGG_ORANGE.get(), ModItems.EASTER_EGG_BLACK.get(),
             ModItems.EASTER_EGG_PURPLE.get(), ModItems.EASTER_EGG_BROWN.get(), ModItems.EASTER_EGG_LIME.get(), ModItems.EASTER_EGG_LIGHT_BLUE.get(),
@@ -44,7 +56,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         for(int i = 0; i < EASTER_EGG_BLOCKS.size(); i++) {
             int index = i;
             this.add(EASTER_EGG_BLOCKS.get(index),
-                    block -> createEggDrop(EASTER_EGG_BLOCKS.get(index), EASTER_EGGS.get(index), 1.0f));
+                    block -> createEggDrop(EASTER_EGG_BLOCKS.get(index), EASTER_EGGS.get(index), 1.0f, 1.0f));
+        }
+
+        for(int i = 0; i < EASTER_EGG_BLOCKS_DUAL.size(); i++) {
+            int index = i;
+            this.add(EASTER_EGG_BLOCKS_DUAL.get(index),
+                    block -> createEggDrop(EASTER_EGG_BLOCKS_DUAL.get(index), EASTER_EGGS.get(index), 2.0f, 2.0f));
+        }
+
+        for(int i = 0; i < EASTER_EGG_BLOCKS_THRICE.size(); i++) {
+            int index = i;
+            this.add(EASTER_EGG_BLOCKS_THRICE.get(index),
+                    block -> createEggDrop(EASTER_EGG_BLOCKS_THRICE.get(index), EASTER_EGGS.get(index), 3.0f, 3.0f));
         }
 
         this.add(ModBlocks.EASTER_BASKET_WG.get(), block -> LootTable.lootTable()
@@ -68,11 +92,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         );
     }
 
-    protected LootTable.Builder createEggDrop(Block pBlock, Item item, Float size) {
+    protected LootTable.Builder createEggDrop(Block pBlock, Item item, Float minSize, Float maxSize) {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
-                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, size)))));
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(minSize, maxSize)))));
     }
 
     protected LootTable.Builder createSilkedDrop(Item silkedDrop, Item drop, Float amount) {

@@ -8,6 +8,7 @@ import lol.exxude.seasonal_greetings.item.ModItems;
 import lol.exxude.seasonal_greetings.recipe.ModRecipe;
 import lol.exxude.seasonal_greetings.screen.ModMenuTypes;
 import lol.exxude.seasonal_greetings.screen.TradingMachineScreen;
+import lol.exxude.seasonal_greetings.worldgen.ModFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,6 +23,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SeasonalGreetings.MOD_ID)
@@ -44,6 +46,8 @@ public class SeasonalGreetings
         ModMenuTypes.register(modEventBus);
 
         ModRecipe.register(modEventBus);
+
+        ModFeatures.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

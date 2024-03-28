@@ -7,6 +7,6 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 
 public record EasterEggConfiguration(BlockStateProvider toPlace) implements FeatureConfiguration {
     public static final Codec<EasterEggConfiguration> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            BlockStateProvider.CODEC.fieldOf("toPlace").forGetter(EasterEggConfiguration::toPlace)
+            BlockStateProvider.CODEC.fieldOf("to_place").forGetter(EasterEggConfiguration::toPlace)
     ).apply(instance, EasterEggConfiguration::new));
 }

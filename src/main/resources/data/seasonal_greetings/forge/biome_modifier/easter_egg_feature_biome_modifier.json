@@ -1,8 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": [
-    "seasonal_greetings:easter_egg_placed_feature"
-  ],
-  "step": "vegetal_decoration"
-}

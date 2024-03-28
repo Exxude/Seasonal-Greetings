@@ -10,7 +10,7 @@ public class SeasonalGreetingsConfig {
     static {
         BUILDER.push("Seasonal Greetings Common Configs");
         ACTIVATE_EASTER = BUILDER.comment("True/False :: This will activate all world generations for Easter Holiday in every biome, everywhere.")
-                .define("Activate Easter", true);
+                .define("Activate Easter", false);
 
         BUILDER.pop();
         SPEC = BUILDER.build();

@@ -1,17 +1,18 @@
 package lol.exxude.seasonal_greetings.worldgen.features;
 
 import com.mojang.serialization.Codec;
+import lol.exxude.seasonal_greetings.SeasonalGreetingsConfig;
 import lol.exxude.seasonal_greetings.util.ModTags;
 import lol.exxude.seasonal_greetings.worldgen.config.EasterEggConfiguration;
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import org.checkerframework.checker.nullness.qual.NonNull;
+
+import java.util.List;
 
 public class EasterEggFeature extends Feature<EasterEggConfiguration> {
     public EasterEggFeature(Codec<EasterEggConfiguration> pCodec) {
@@ -25,25 +26,26 @@ public class EasterEggFeature extends Feature<EasterEggConfiguration> {
         BlockPos pos = featurePlaceContext.origin();
         BlockState state = config.toPlace().getState(featurePlaceContext.random(), pos);
 
-        TagKey<Block> easterEggs = ModTags.Blocks.EASTER_EGGS;
-        TagKey<Block> dirtTag = BlockTags.DIRT;
+        if(SeasonalGreetingsConfig.ACTIVATE_EASTER.get()) {
+            if (level.getBlockState(pos).isAir()) {
+                if (level.isEmptyBlock(pos.above())) {
+                    if (level.getBlockState(pos.below()).is(ModTags.Blocks.EASTER_EGG_SPAWNABLES)) {
 
-        if(level.getBlockState(pos).isAir()) {
-            if(state.is(easterEggs)) {
-                if(level.isEmptyBlock(pos.above())); {
-                    if(!level.getBlockState(pos.below()).is(dirtTag)) {
+                        level.setBlock(pos, state, Block.UPDATE_CLIENTS);
+                        return true;
 
+                    } else {
                         return false;
-
                     }
-                    level.setBlock(pos, state, Block.UPDATE_CLIENTS);
+
+                } else {
+                    return false;
                 }
+
+            } else {
+                return false;
             }
-
-            return true;
-
         } else {
-
             return false;
         }
     }

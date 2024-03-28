@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:plains",
+  "features": "seasonal_greetings:easter_egg_placed_feature_plains",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "seasonal_greetings:easter_egg_placed_feature_nether",
+  "step": "vegetal_decoration"
+}

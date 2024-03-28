@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 4,
+    "xz_spread": 3,
+    "y_spread": 1,
+    "feature": {
+      "feature": {
+        "type": "seasonal_greetings:easter_egg",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 370,
+                "data": {
+                  "Name": "seasonal_greetings:easter_egg_red_block"
+                }
+              },
+              {
+                "weight": 75,
+                "data": {
+                  "Name": "seasonal_greetings:easter_basket_wg"
+                }
+              },
+              {
+                "weight": 50,
+                "data": {
+                  "Name": "seasonal_greetings:easter_egg_wild_block"
+                }
+              },
+              {
+                "weight": 5,
+                "data": {
+                  "Name": "seasonal_greetings:easter_egg_golden_block"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}

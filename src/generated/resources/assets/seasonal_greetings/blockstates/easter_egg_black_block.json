@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "seasonal_greetings:block/easter_egg_black_block",
+      "y": 90
+    },
+    "facing=north": {
       "model": "seasonal_greetings:block/easter_egg_black_block"
+    },
+    "facing=south": {
+      "model": "seasonal_greetings:block/easter_egg_black_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "seasonal_greetings:block/easter_egg_black_block",
+      "y": 270
     }
   }
 }
