@@ -1,9 +1,9 @@
 {
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 4,
-    "xz_spread": 3,
-    "y_spread": 2,
+    "tries": 6,
+    "xz_spread": 4,
+    "y_spread": 3,
     "feature": {
       "feature": {
         "type": "seasonal_greetings:easter_egg",
@@ -12,25 +12,25 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
               {
-                "weight": 185,
+                "weight": 195,
                 "data": {
                   "Name": "seasonal_greetings:easter_egg_pink_block"
                 }
               },
               {
-                "weight": 185,
+                "weight": 195,
                 "data": {
                   "Name": "seasonal_greetings:easter_egg_magenta_block"
                 }
               },
               {
-                "weight": 75,
+                "weight": 80,
                 "data": {
                   "Name": "seasonal_greetings:easter_basket_wg"
                 }
               },
               {
-                "weight": 50,
+                "weight": 25,
                 "data": {
                   "Name": "seasonal_greetings:easter_egg_wild_block"
                 }

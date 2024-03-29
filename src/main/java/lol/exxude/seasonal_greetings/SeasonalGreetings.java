@@ -3,6 +3,7 @@ package lol.exxude.seasonal_greetings;
 import com.mojang.logging.LogUtils;
 import lol.exxude.seasonal_greetings.block.ModBlocks;
 import lol.exxude.seasonal_greetings.block.entity.ModBlockEntities;
+import lol.exxude.seasonal_greetings.entity.EndermanListener;
 import lol.exxude.seasonal_greetings.item.ModCreativeModeTabs;
 import lol.exxude.seasonal_greetings.item.ModItems;
 import lol.exxude.seasonal_greetings.recipe.ModRecipe;
@@ -32,7 +33,7 @@ public class SeasonalGreetings
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "seasonal_greetings";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public SeasonalGreetings() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -48,6 +49,8 @@ public class SeasonalGreetings
         ModRecipe.register(modEventBus);
 
         ModFeatures.register(modEventBus);
+
+        MinecraftForge.EVENT_BUS.register(EndermanListener.class);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

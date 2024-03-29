@@ -43,6 +43,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             ModItems.EASTER_EGG_CYAN.get(), ModItems.EASTER_EGG_WHITE.get(), ModItems.EASTER_EGG_PINK.get(), ModItems.EASTER_EGG_MAGENTA.get(),
             ModItems.EASTER_EGG_LIGHT_GRAY.get(), ModItems.EASTER_EGG_GRAY.get(), ModItems.EASTER_EGG_WILD.get(), ModItems.EASTER_EGG_GOLDEN.get());
 
+    private static final List<Block> EASTER_EGG_BLOCKS_HELD = List.of(ModBlocks.EASTER_EGG_BLACK_BLOCK_HELD.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_HELD.get(),
+            ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL_HELD.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL_HELD.get(),
+            ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE_HELD.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE_HELD.get());
+    private static final List<Block> EASTER_EGG_BLOCKS_DROP = List.of(ModBlocks.EASTER_EGG_BLACK_BLOCK.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK.get(),
+            ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL.get(),
+            ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE.get());
+
+
     public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
@@ -71,6 +79,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                     block -> createEggDrop(EASTER_EGG_BLOCKS_THRICE.get(index), EASTER_EGGS.get(index), 3.0f, 3.0f));
         }
 
+        for(int i = 0; i < EASTER_EGG_BLOCKS_HELD.size(); i++) {
+            int index = i;
+            this.add(EASTER_EGG_BLOCKS_HELD.get(index),
+                    block -> createEggBlockDropNoSilk(EASTER_EGG_BLOCKS_DROP.get(index).asItem()));
+        }
+
         this.add(ModBlocks.EASTER_BASKET_WG.get(), block -> LootTable.lootTable()
                 .withPool(LootPool.lootPool()
                         .add(LootItem.lootTableItem(ModBlocks.EASTER_BASKET.get()))
@@ -97,6 +111,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(minSize, maxSize)))));
+    }
+
+    protected LootTable.Builder createEggBlockDropNoSilk(Item drop) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(drop)));
     }
 
     protected LootTable.Builder createSilkedDrop(Item silkedDrop, Item drop, Float amount) {

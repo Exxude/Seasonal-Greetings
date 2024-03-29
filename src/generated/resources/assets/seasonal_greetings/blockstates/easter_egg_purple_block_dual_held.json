@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "seasonal_greetings:block/enderman_held/easter_egg_purple_block_dual_held",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "seasonal_greetings:block/enderman_held/easter_egg_purple_block_dual_held"
+    },
+    "facing=south": {
+      "model": "seasonal_greetings:block/enderman_held/easter_egg_purple_block_dual_held",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "seasonal_greetings:block/enderman_held/easter_egg_purple_block_dual_held",
+      "y": 270
+    }
+  }
+}

@@ -14,7 +14,7 @@ public class ModFeatures {
     public static final DeferredRegister<Feature<?>> FEATURES =
             DeferredRegister.create(ForgeRegistries.FEATURES, SeasonalGreetings.MOD_ID);
 
-    public static final RegistryObject<Feature<EasterEggConfiguration>> TEST_LAKE = FEATURES.register("easter_egg",
+    public static final RegistryObject<Feature<EasterEggConfiguration>> EASTER_EGG_FEATURE = FEATURES.register("easter_egg",
             () -> new EasterEggFeature(EasterEggConfiguration.CODEC));
 
     public static void register(IEventBus eventBus) { FEATURES.register(eventBus); }

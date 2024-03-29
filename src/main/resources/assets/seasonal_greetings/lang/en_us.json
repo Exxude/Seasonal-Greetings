@@ -104,6 +104,13 @@
   "block.seasonal_greetings.easter_egg_wild_block_thrice": "Easter Egg Wild",
   "block.seasonal_greetings.easter_egg_golden_block_thrice": "Easter Egg Golden",
 
+  "block.seasonal_greetings.easter_egg_black_block_held": "Easter Egg Black",
+  "block.seasonal_greetings.easter_egg_purple_block_held": "Easter Egg Purple",
+  "block.seasonal_greetings.easter_egg_black_block_dual_held": "Easter Egg Black",
+  "block.seasonal_greetings.easter_egg_purple_block_dual_held": "Easter Egg Purple",
+  "block.seasonal_greetings.easter_egg_black_block_thrice_held": "Easter Egg Black",
+  "block.seasonal_greetings.easter_egg_purple_block_thrice_held": "Easter Egg Purple",
+
   "block.seasonal_greetings.easter_stuffed_animal_bunny": "Stuffed Animal: Bunny",
 
   "tooltip.seasonal_greetings.cotton_candy_red": "Fire Resistance 1:00",

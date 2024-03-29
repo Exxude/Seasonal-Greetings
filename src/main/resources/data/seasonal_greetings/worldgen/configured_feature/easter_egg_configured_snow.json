@@ -12,9 +12,15 @@
             "type": "minecraft:weighted_state_provider",
             "entries": [
               {
-                "weight": 390,
+                "weight": 195,
                 "data": {
-                  "Name": "seasonal_greetings:easter_egg_red_block"
+                  "Name": "seasonal_greetings:easter_egg_white_block"
+                }
+              },
+              {
+                "weight": 195,
+                "data": {
+                  "Name": "seasonal_greetings:easter_egg_light_blue_block"
                 }
               },
               {

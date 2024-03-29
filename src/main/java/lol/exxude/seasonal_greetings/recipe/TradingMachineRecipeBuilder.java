@@ -98,8 +98,6 @@ public class TradingMachineRecipeBuilder implements RecipeBuilder {
                 pJson.addProperty("group", this.group);
             }
 
-            System.out.println(inputItems.size());
-
             JsonArray inJson = new JsonArray();
 
             if(this.inputOneTag) {

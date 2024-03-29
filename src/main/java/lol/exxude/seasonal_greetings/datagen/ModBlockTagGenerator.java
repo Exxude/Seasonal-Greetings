@@ -34,7 +34,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.EASTER_EGG_GRAY_BLOCK.get(), ModBlocks.EASTER_EGG_WILD_BLOCK.get(), ModBlocks.EASTER_EGG_GOLDEN_BLOCK.get());
 
         this.tag(ModTags.Blocks.EASTER_EGG_SPAWNABLES)
-                .add(TagEntry.tag(new ResourceLocation("minecraft:dirt")));
+                .add(TagEntry.tag(new ResourceLocation("minecraft:dirt")))
+                .add(TagEntry.tag(new ResourceLocation("minecraft:sand")))
+                .add(TagEntry.tag(new ResourceLocation("minecraft:stone_ore_replaceables")))
+                .add(TagEntry.tag(new ResourceLocation("minecraft:deepslate_ore_replaceables")));
         this.tag(ModTags.Blocks.EASTER_EGG_SPAWNABLES)
                 .add(Blocks.NETHERRACK);
     }

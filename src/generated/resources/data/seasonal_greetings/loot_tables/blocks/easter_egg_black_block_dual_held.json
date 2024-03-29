@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "seasonal_greetings:easter_egg_black_block_dual"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "seasonal_greetings:blocks/easter_egg_black_block_dual_held"
+}

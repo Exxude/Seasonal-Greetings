@@ -26,8 +26,6 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, SeasonalGreetings.MOD_ID);
-    public static final RegistryObject<Block> EASTER_BASKET_WG = registerBlock("easter_basket_wg",
-            () -> new EasterBasketBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).destroyTime(0).noOcclusion()));
     public static final RegistryObject<Block> EASTER_BASKET = registerBlock("easter_basket",
             () -> new EasterBasketBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).destroyTime(0).noOcclusion()));
 
@@ -146,6 +144,24 @@ public class ModBlocks {
             () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
     public static final RegistryObject<Block> EASTER_EGG_GOLDEN_BLOCK_THRICE = registerBlock("easter_egg_golden_block_thrice",
             () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+
+    // UNUSUAL VARIANTS
+
+    public static final RegistryObject<Block> EASTER_BASKET_WG = registerBlock("easter_basket_wg",
+            () -> new EasterBasketBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).destroyTime(0).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_EGG_BLACK_BLOCK_HELD = registerBlock("easter_egg_black_block_held",
+            () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_EGG_PURPLE_BLOCK_HELD = registerBlock("easter_egg_purple_block_held",
+            () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_EGG_BLACK_BLOCK_DUAL_HELD = registerBlock("easter_egg_black_block_dual_held",
+            () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_EGG_PURPLE_BLOCK_DUAL_HELD = registerBlock("easter_egg_purple_block_dual_held",
+            () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_EGG_BLACK_BLOCK_THRICE_HELD = registerBlock("easter_egg_black_block_thrice_held",
+            () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_EGG_PURPLE_BLOCK_THRICE_HELD = registerBlock("easter_egg_purple_block_thrice_held",
+            () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+
 
     public static final RegistryObject<Block> TRADING_MACHINE = registerBlock("trading_machine",
             () -> new TradingMachineBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE).strength(5.0F, 6.0F).sound(SoundType.METAL)));
