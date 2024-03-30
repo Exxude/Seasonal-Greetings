@@ -1,7 +1,6 @@
 package lol.exxude.seasonal_greetings.datagen;
 
 import lol.exxude.seasonal_greetings.SeasonalGreetings;
-import lol.exxude.seasonal_greetings.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -31,5 +30,7 @@ public class DataGenerators {
                 new ModBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput,
                 lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+
+        //generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
     }
 }

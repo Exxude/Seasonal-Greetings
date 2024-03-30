@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "seasonal_greetings:easter_island_biome",
+  "features": "seasonal_greetings:easter_egg_placed_feature_all",
+  "step": "vegetal_decoration"
+}

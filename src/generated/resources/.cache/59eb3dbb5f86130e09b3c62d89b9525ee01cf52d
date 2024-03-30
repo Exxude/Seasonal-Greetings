@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-29T14:30:11.7761144	Loot Tables
+// 1.20.1	2024-03-29T23:26:19.4898477	Loot Tables
 ffe9f1cb9963632f961c349f2832313b811e1f42 data/seasonal_greetings/loot_tables/blocks/easter_basket.json
 3e34c125e9cfd22df699ac0f4bac550896f550ee data/seasonal_greetings/loot_tables/blocks/easter_basket_wg.json
 151e6cd08c7d680292f8405e9cb6334233671322 data/seasonal_greetings/loot_tables/blocks/easter_egg_black_block.json
@@ -61,5 +61,6 @@ d284cdd3f3a34ea7301230752f7a23d9e74580bf data/seasonal_greetings/loot_tables/blo
 60b3ff9fd5a16e5e400e1422bddc7cc67f32e26b data/seasonal_greetings/loot_tables/blocks/easter_egg_yellow_block.json
 058860b6c7bcdd33ee92a39a14c0d14894cd2edc data/seasonal_greetings/loot_tables/blocks/easter_egg_yellow_block_dual.json
 93af0b52b42353e62b54c631103c2ef2c4ff5460 data/seasonal_greetings/loot_tables/blocks/easter_egg_yellow_block_thrice.json
+198a3b44547a45a374afe772796c1424b49a8c0c data/seasonal_greetings/loot_tables/blocks/easter_island_grass_block.json
 11eb6033307a3af942d0702bc0dadc0d3f79702f data/seasonal_greetings/loot_tables/blocks/easter_stuffed_animal_bunny.json
 25b8a9bdf24fcacc128a7d6fec9c9714c860317a data/seasonal_greetings/loot_tables/blocks/trading_machine.json

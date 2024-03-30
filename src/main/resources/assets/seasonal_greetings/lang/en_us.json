@@ -46,6 +46,7 @@
   "block.seasonal_greetings.easter_basket": "Easter Basket",
   "block.seasonal_greetings.easter_basket_wg": "Easter Basket",
   "block.seasonal_greetings.trading_machine": "Trading Machine",
+  "block.seasonal_greetings.easter_island_grass_block": "Easter Island Grass Block",
 
   "block.seasonal_greetings.easter_egg_red_block": "Easter Egg Red",
   "block.seasonal_greetings.easter_egg_blue_block": "Easter Egg Blue",
@@ -134,5 +135,7 @@
   "tooltip.seasonal_greetings.cotton_candy_golden_effect3": "Damage Resistance 1:00",
   "tooltip.seasonal_greetings.cotton_candy_golden_effect4": "Damage Boost 1:00",
 
-  "creativetab.easter_tab": "Seasonal Greetings: Easter"
+  "creativetab.easter_tab": "Seasonal Greetings: Easter",
+
+  "biome.easter_island_biome": "Easter Island"
 }

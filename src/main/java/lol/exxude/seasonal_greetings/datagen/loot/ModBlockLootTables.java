@@ -5,6 +5,7 @@ import lol.exxude.seasonal_greetings.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -60,6 +61,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.TRADING_MACHINE.get());
         this.dropSelf(ModBlocks.EASTER_BASKET.get());
         this.dropSelf(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get());
+
+        this.add(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get(),
+                block -> createSilkedDrop(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get().asItem(), Items.DIRT, 1.0f));
+
 
         for(int i = 0; i < EASTER_EGG_BLOCKS.size(); i++) {
             int index = i;

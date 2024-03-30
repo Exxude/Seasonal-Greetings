@@ -1,16 +1,12 @@
 package lol.exxude.seasonal_greetings.block;
 
 import lol.exxude.seasonal_greetings.SeasonalGreetings;
-import lol.exxude.seasonal_greetings.block.custom.EasterBasketBlock;
-import lol.exxude.seasonal_greetings.block.custom.EasterEggBlock;
-import lol.exxude.seasonal_greetings.block.custom.StuffedAnimalBunnyBlock;
-import lol.exxude.seasonal_greetings.block.custom.TradingMachineBlock;
+import lol.exxude.seasonal_greetings.block.custom.*;
 import lol.exxude.seasonal_greetings.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -161,6 +157,10 @@ public class ModBlocks {
             () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
     public static final RegistryObject<Block> EASTER_EGG_PURPLE_BLOCK_THRICE_HELD = registerBlock("easter_egg_purple_block_thrice_held",
             () -> new EasterEggBlock(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).destroyTime(0).noOcclusion()));
+
+
+    public static final RegistryObject<Block> EASTER_ISLAND_GRASS_BLOCK = registerBlock("easter_island_grass_block",
+            () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
 
 
     public static final RegistryObject<Block> TRADING_MACHINE = registerBlock("trading_machine",

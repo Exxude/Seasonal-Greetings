@@ -10,6 +10,8 @@ import lol.exxude.seasonal_greetings.recipe.ModRecipe;
 import lol.exxude.seasonal_greetings.screen.ModMenuTypes;
 import lol.exxude.seasonal_greetings.screen.TradingMachineScreen;
 import lol.exxude.seasonal_greetings.worldgen.ModFeatures;
+import lol.exxude.seasonal_greetings.worldgen.biome.ModTerrablender;
+import lol.exxude.seasonal_greetings.worldgen.biome.surface.ModSurfaceRules;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +26,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -50,6 +53,8 @@ public class SeasonalGreetings
 
         ModFeatures.register(modEventBus);
 
+        //ModTerrablender.registerBiomes();
+
         MinecraftForge.EVENT_BUS.register(EndermanListener.class);
 
         // Register the commonSetup method for modloading
@@ -64,6 +69,7 @@ public class SeasonalGreetings
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, SeasonalGreetingsConfig.SPEC, "seasonal_greetings-common_config.toml");
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
     }
 
     // Add the example block item to the building blocks tab

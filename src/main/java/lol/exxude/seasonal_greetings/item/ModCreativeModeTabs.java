@@ -136,6 +136,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK.get());
                         pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK_DUAL.get());
                         pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK_THRICE.get());
+
+                        pOutput.accept(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get());
                     })
                     .build());
 
