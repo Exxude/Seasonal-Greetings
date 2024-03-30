@@ -64,10 +64,10 @@ description='''${mod_description}'''
     side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="terrablender"
+modId="curios"
 mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-versionRange="${terrablender_version_range}"
+versionRange="${curios_version_range}"
 ordering="NONE"
 side="BOTH"
 
