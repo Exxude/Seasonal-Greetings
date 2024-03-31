@@ -18,8 +18,13 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.EASTER_EGG_RED.get()))
                     .title(Component.translatable("creativetab.easter_tab"))
                     .displayItems((pParameters, pOutput) -> {
+
                         pOutput.accept(ModBlocks.TRADING_MACHINE.get());
                         pOutput.accept(ModItems.TRADING_MACHINE_TEMPLATE.get());
+
+                        pOutput.accept(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get());
+                        pOutput.accept(ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.get());
+//                        pOutput.accept(ModBlocks.EASTER_ISLAND_GRASS.get());
 
                         pOutput.accept(ModItems.EASTER_EGG_RED.get());
                         pOutput.accept(ModItems.EASTER_EGG_BLUE.get());
@@ -62,7 +67,12 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.EASTER_CARROT_SWORD.get());
 
+                        pOutput.accept(ModBlocks.EASTER_BUNNY_NEST.get());
+
                         pOutput.accept(ModBlocks.EASTER_BASKET.get());
+                        pOutput.accept(ModBlocks.EASTER_BASKET_MEDIUM.get());
+                        pOutput.accept(ModBlocks.EASTER_BASKET_LARGE.get());
+
                         pOutput.accept(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get());
 
                         pOutput.accept(ModBlocks.EASTER_EGG_RED_BLOCK.get());
@@ -137,7 +147,6 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK_DUAL.get());
                         pOutput.accept(ModBlocks.EASTER_EGG_GOLDEN_BLOCK_THRICE.get());
 
-                        pOutput.accept(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get());
                     })
                     .build());
 

@@ -51,7 +51,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL.get(),
             ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE.get());
 
-
     public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
@@ -60,10 +59,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.TRADING_MACHINE.get());
         this.dropSelf(ModBlocks.EASTER_BASKET.get());
+        this.dropSelf(ModBlocks.EASTER_BASKET_MEDIUM.get());
+        this.dropSelf(ModBlocks.EASTER_BASKET_LARGE.get());
+
+        this.dropSelf(ModBlocks.EASTER_BUNNY_NEST.get());
+
         this.dropSelf(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get());
 
         this.add(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get(),
                 block -> createSilkedDrop(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get().asItem(), Items.DIRT, 1.0f));
+        this.add(ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.get(),
+                block -> createSilkedDrop(ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.get().asItem(), Items.DIRT, 1.0f));
 
 
         for(int i = 0; i < EASTER_EGG_BLOCKS.size(); i++) {
@@ -106,6 +112,82 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(6.0f, 8.0f))))
                         .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_BUNNY.get()).setWeight(75)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(6.0f, 8.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_EGG_GOLDEN.get()).setWeight(1))
+                )
+        );
+
+        this.add(ModBlocks.EASTER_BASKET_MEDIUM_WG.get(), block -> LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModBlocks.EASTER_BASKET_MEDIUM.get()))
+                )
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_EGG.get()).setWeight(20)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0f, 8.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_BUNNY.get()).setWeight(20)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0f, 8.0f))))
+                        .add(LootItem.lootTableItem(ModItems.TRADING_MACHINE_TEMPLATE.get()).setWeight(1))
+                )
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_EGG.get()).setWeight(60)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(8.0f, 12.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_BUNNY.get()).setWeight(60)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(8.0f, 12.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_EGG_GOLDEN.get()).setWeight(1))
+                )
+        );
+
+        this.add(ModBlocks.EASTER_BASKET_LARGE_WG.get(), block -> LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModBlocks.EASTER_BASKET_LARGE.get()))
+                )
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_EGG.get()).setWeight(15)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(6.0f, 10.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_BUNNY.get()).setWeight(15)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(6.0f, 10.0f))))
+                        .add(LootItem.lootTableItem(ModItems.TRADING_MACHINE_TEMPLATE.get()).setWeight(1))
+                )
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_RED.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_BLUE.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_GREEN.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_YELLOW.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_ORANGE.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_BLACK.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_PURPLE.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_BROWN.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_LIME.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_LIGHT_BLUE.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_CYAN.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_WHITE.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_PINK.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_MAGENTA.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_LIGHT_GRAY.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_GRAY.get()).setWeight(5)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0f, 6.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_COTTON_CANDY_GOLDEN.get()).setWeight(1))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CARROT_SWORD.get()).setWeight(1))
+                )
+                .withPool(LootPool.lootPool()
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_EGG.get()).setWeight(40)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(12.0f, 16.0f))))
+                        .add(LootItem.lootTableItem(ModItems.EASTER_CHOCOLATE_BUNNY.get()).setWeight(40)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(12.0f, 16.0f))))
                         .add(LootItem.lootTableItem(ModItems.EASTER_EGG_GOLDEN.get()).setWeight(1))
                 )
         );

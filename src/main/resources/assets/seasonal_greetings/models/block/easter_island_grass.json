@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "seasonal_greetings:block/easter_island_grass"
+  }
+}

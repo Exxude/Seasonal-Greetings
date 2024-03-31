@@ -45,8 +45,19 @@
 
   "block.seasonal_greetings.easter_basket": "Easter Basket",
   "block.seasonal_greetings.easter_basket_wg": "Easter Basket",
+  "block.seasonal_greetings.easter_basket_medium": "Easter Basket Medium",
+  "block.seasonal_greetings.easter_basket_medium_wg": "Easter Basket Medium",
+  "block.seasonal_greetings.easter_basket_large": "Easter Basket Large",
+  "block.seasonal_greetings.easter_basket_large_wg": "Easter Basket Large",
+
+  "block.seasonal_greetings.easter_bunny_nest": "Easter Bunny Nest",
+  "block.seasonal_greetings.easter_bunny_nest_wg": "Easter Bunny Nest",
+
   "block.seasonal_greetings.trading_machine": "Trading Machine",
+
   "block.seasonal_greetings.easter_island_grass_block": "Easter Island Grass Block",
+  "block.seasonal_greetings.easter_island_grass_block_full": "Easter Island Grass Block Full",
+  "block.seasonal_greetings.easter_island_grass": "Easter Island Grass",
 
   "block.seasonal_greetings.easter_egg_red_block": "Easter Egg Red",
   "block.seasonal_greetings.easter_egg_blue_block": "Easter Egg Blue",

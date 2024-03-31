@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/dirt",
+    "particle": "minecraft:block/dirt",
+    "side": "seasonal_greetings:block/easter_island_grass_block_snow",
+    "top": "seasonal_greetings:block/easter_island_grass_block_top"
+  }
+}

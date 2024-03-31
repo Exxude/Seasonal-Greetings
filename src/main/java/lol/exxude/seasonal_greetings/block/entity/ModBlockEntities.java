@@ -16,6 +16,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("trading_machine_be", () ->
                     BlockEntityType.Builder.of(TradingMachineBlockEntity::new,
                             ModBlocks.TRADING_MACHINE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<EasterBunnyNestBlockEntity>> EASTER_BUNNY_NEST_BE =
+            BLOCK_ENTITIES.register("easter_bunny_nest_be", () ->
+                    BlockEntityType.Builder.of(EasterBunnyNestBlockEntity::new,
+                            ModBlocks.EASTER_BUNNY_NEST_WG.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

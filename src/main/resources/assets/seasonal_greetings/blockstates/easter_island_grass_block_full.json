@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "seasonal_greetings:block/easter_island_grass_block_full"
+      },
+      {
+        "model": "seasonal_greetings:block/easter_island_grass_block_full",
+        "y": 90
+      },
+      {
+        "model": "seasonal_greetings:block/easter_island_grass_block_full",
+        "y": 180
+      },
+      {
+        "model": "seasonal_greetings:block/easter_island_grass_block_full",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "seasonal_greetings:block/easter_island_grass_block_full_snow"
+    }
+  }
+}

@@ -14,6 +14,7 @@ public class SeasonalGreetingsConfig {
         BUILDER.push("Seasonal Greetings Common Configs");
         BUILDER.pop();
         BUILDER.push("EASTER");
+        BUILDER.comment("Currently, structure spawns are not disabled through Config.");
         ACTIVATE_EASTER = BUILDER.comment("True/False :: This will activate/deactivate all Events for the Easter Holiday in every biome, everywhere. If this is 'false', the following options have no effect.")
                 .define("Activate Easter", false);
         DISABLE_EASTER_WORLD_GENERATION = BUILDER.comment("True/False :: This will activate/deactivate all World Generation Events for the Easter Holiday in every biome, except the Easter Island.")
