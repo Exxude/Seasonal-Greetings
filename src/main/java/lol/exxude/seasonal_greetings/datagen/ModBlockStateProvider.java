@@ -6,11 +6,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
@@ -56,24 +53,42 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         customBlockWithItem(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get(), ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY, "");
 
-        horizontalBlock(ModBlocks.EASTER_BASKET.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_BASKET.getId().getPath())));
 
-        horizontalBlock(ModBlocks.EASTER_BASKET_WG.get(),
-                new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_BASKET_WG.getId().getPath())));
+        customBlockWithItem(ModBlocks.EASTER_BASKET.get(), ModBlocks.EASTER_BASKET, "");
+        customBlockWithItem(ModBlocks.EASTER_BASKET_WG.get(), ModBlocks.EASTER_BASKET, "");
 
-        blockFacesWithItem(ModBlocks.TRADING_MACHINE.get(), ModBlocks.TRADING_MACHINE);
+        customBlockWithItem(ModBlocks.EASTER_BASKET_MEDIUM.get(), ModBlocks.EASTER_BASKET_MEDIUM, "");
+        customBlockWithItem(ModBlocks.EASTER_BASKET_MEDIUM_WG.get(), ModBlocks.EASTER_BASKET_MEDIUM, "");
+
+        customBlockWithItem(ModBlocks.EASTER_BASKET_LARGE.get(), ModBlocks.EASTER_BASKET_LARGE, "");
+        customBlockWithItem(ModBlocks.EASTER_BASKET_LARGE_WG.get(), ModBlocks.EASTER_BASKET_LARGE, "");
+
+        customBlockWithItem(ModBlocks.EASTER_ISLAND_HEAD.get(), ModBlocks.EASTER_ISLAND_HEAD, "");
+        customBlockWithItem(ModBlocks.EASTER_ISLAND_HEAD_TOP.get(), ModBlocks.EASTER_ISLAND_HEAD_TOP, "");
+        customBlockWithItem(ModBlocks.EASTER_ISLAND_HEAD_BOTTOM.get(), ModBlocks.EASTER_ISLAND_HEAD_BOTTOM, "");
+
+        simpleBlockItem(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_ISLAND_GRASS_BLOCK.getId().getPath())));
+        simpleBlockItem(ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.getId().getPath())));
+        simpleBlockItem(ModBlocks.EASTER_ISLAND_GRASS.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_ISLAND_GRASS.getId().getPath())));
+        simpleBlockItem(ModBlocks.EASTER_STRAW.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_STRAW.getId().getPath())));
+
+        simpleBlockItem(ModBlocks.EASTER_BUNNY_NEST.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_BUNNY_NEST.getId().getPath())));
+        simpleBlockItem(ModBlocks.EASTER_BUNNY_NEST_WG.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_BUNNY_NEST.getId().getPath())));
+
+
+        blockFacesWithItem(ModBlocks.TRADING_MACHINE.get(), ModBlocks.TRADING_MACHINE,
+                "_front", "_side", "_top");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 
-    private void blockFacesWithItem(Block block, RegistryObject<Block> blockRegistryObject) {
+    private void blockFacesWithItem(Block block, RegistryObject<Block> blockRegistryObject, String front, String side, String top) {
         horizontalBlock(block,
-                new ResourceLocation(SeasonalGreetings.MOD_ID, "block/" + blockRegistryObject.getId().getPath() + "_front"),
-                new ResourceLocation(SeasonalGreetings.MOD_ID, "block/" + blockRegistryObject.getId().getPath() + "_side"),
-                new ResourceLocation(SeasonalGreetings.MOD_ID, "block/" + blockRegistryObject.getId().getPath() + "_top"));
+                new ResourceLocation(SeasonalGreetings.MOD_ID, "block/" + blockRegistryObject.getId().getPath() + front),
+                new ResourceLocation(SeasonalGreetings.MOD_ID, "block/" + blockRegistryObject.getId().getPath() + side),
+                new ResourceLocation(SeasonalGreetings.MOD_ID, "block/" + blockRegistryObject.getId().getPath() + top));
 
         simpleBlockItem(block, new ModelFile.UncheckedModelFile(modLoc("block/" + blockRegistryObject.getId().getPath())));
     }

@@ -5,6 +5,7 @@ import lol.exxude.seasonal_greetings.block.ModBlocks;
 import lol.exxude.seasonal_greetings.block.entity.TradingMachineBlockEntity;
 import lol.exxude.seasonal_greetings.item.ModItems;
 import lol.exxude.seasonal_greetings.util.ModTags;
+import net.minecraft.core.Direction;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -35,7 +36,6 @@ public class TradingMachineMenu extends AbstractContainerMenu {
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
-
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
             this.addSlot(new SlotItemHandler(iItemHandler, 0, 35, 40) {
                 @Override
@@ -47,7 +47,9 @@ public class TradingMachineMenu extends AbstractContainerMenu {
                     return itemStack.is(ModTags.Items.TRADABLE_CATALYSTS);
                 }
             });
-            this.addSlot(new SlotItemHandler(iItemHandler, 2, 134, 40) {
+        });
+        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, Direction.DOWN).ifPresent(iItemHandler -> {
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 134, 40) {
                 @Override
                 public boolean mayPlace(ItemStack itemStack) {
                     return false;

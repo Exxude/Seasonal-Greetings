@@ -17,6 +17,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> TRADING_MACHINE_TEMPLATE = ITEMS.register("trading_machine_template",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TRADING_MACHINE_TEMPLATE_SHARD = ITEMS.register("trading_machine_template_shard",
+            () -> new Item(new Item.Properties()));
 
     // EASTER EGGS
     public static final RegistryObject<Item> EASTER_EGG_RED = ITEMS.register("easter_egg_red",

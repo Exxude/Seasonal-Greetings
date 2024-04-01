@@ -26,7 +26,7 @@ public class EasterBasketBlock extends Block {
     }
 
     private static final VoxelShape SHAPE = Stream.of(
-            Block.box(5, 0, 5, 11, 7, 11)
+            Block.box(4, 0, 4, 12, 10, 12)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
     @Override

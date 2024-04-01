@@ -30,7 +30,14 @@ import java.util.*;
 
 public class TradingMachineBlockEntity extends BlockEntity implements MenuProvider {
 
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3) {
+    private final ItemStackHandler itemInputHandler = new ItemStackHandler(2) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            super.onContentsChanged(slot);
+            saveAdditional(saveWithFullMetadata());
+        }
+    };
+    private final ItemStackHandler itemOutputHandler = new ItemStackHandler(1) {
         @Override
         protected void onContentsChanged(int slot) {
             super.onContentsChanged(slot);
@@ -40,9 +47,10 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
 
     private static final int INPUT_SLOT = 0;
     private static final int CATALYST_SLOT = 1;
-    private static final int OUTPUT_SLOT = 2;
+    private static final int OUTPUT_SLOT = 0;
 
-    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
+    private LazyOptional<IItemHandler> lazyItemInputHandler = LazyOptional.empty();
+    private LazyOptional<IItemHandler> lazyItemOutputHandler = LazyOptional.empty();
 
     protected final ContainerData data;
     private int progress = 0;
@@ -50,8 +58,10 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
-        if(cap == ForgeCapabilities.ITEM_HANDLER) {
-            return lazyItemHandler.cast();
+        if(side == Direction.DOWN && cap == ForgeCapabilities.ITEM_HANDLER) {
+            return lazyItemOutputHandler.cast();
+        } else if(cap == ForgeCapabilities.ITEM_HANDLER) {
+            return lazyItemInputHandler.cast();
         }
         return super.getCapability(cap, side);
     }
@@ -59,20 +69,26 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
     @Override
     public void onLoad() {
         super.onLoad();
-        lazyItemHandler = LazyOptional.of(() -> itemHandler);
+        lazyItemInputHandler = LazyOptional.of(() -> itemInputHandler);
+        lazyItemOutputHandler = LazyOptional.of(() -> itemOutputHandler);
     }
 
     @Override
     public void invalidateCaps() {
         super.invalidateCaps();
-        lazyItemHandler.invalidate();
+        lazyItemInputHandler.invalidate();
+        lazyItemOutputHandler.invalidate();
     }
 
     public void drops() {
-        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
-        for(int i = 0; i < itemHandler.getSlots(); i++) {
-            inventory.setItem(i, itemHandler.getStackInSlot(i));
+        SimpleContainer inventory = new SimpleContainer(itemInputHandler.getSlots() + itemOutputHandler.getSlots());
+        for(int i = 0; i < itemInputHandler.getSlots(); i++) {
+            inventory.addItem(itemInputHandler.getStackInSlot(i));
         }
+        for(int i = 0; i < itemOutputHandler.getSlots(); i++) {
+            inventory.addItem(itemOutputHandler.getStackInSlot(i));
+        }
+
 
         Containers.dropContents(this.level, this.worldPosition, inventory);
     }
@@ -117,7 +133,8 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
-        pTag.put("inventory", itemHandler.serializeNBT());
+        pTag.put("inputInventory", itemInputHandler.serializeNBT());
+        pTag.put("outputInventory", itemOutputHandler.serializeNBT());
         pTag.putInt("trading_machine.progress", progress);
         super.saveAdditional(pTag);
     }
@@ -125,7 +142,8 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
     @Override
     public void load(CompoundTag pTag) {
         super.load(pTag);
-        itemHandler.deserializeNBT(pTag.getCompound("inventory"));
+        itemInputHandler.deserializeNBT(pTag.getCompound("inputInventory"));
+        itemOutputHandler.deserializeNBT(pTag.getCompound("outputInventory"));
         progress = pTag.getInt("trading_machine.progress");
     }
 
@@ -159,11 +177,11 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
         TradingMachineRecipe recipe = weightedRecipes.get(number);
         ItemStack result = recipe.getResultItem(getLevel().registryAccess());
 
-        this.itemHandler.extractItem(INPUT_SLOT, 1, false);
-        this.itemHandler.extractItem(CATALYST_SLOT, 1, false);
+        this.itemInputHandler.extractItem(INPUT_SLOT, 1, false);
+        this.itemInputHandler.extractItem(CATALYST_SLOT, 1, false);
 
-        this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
-                this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
+        this.itemOutputHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
+                this.itemOutputHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
     }
 
     private boolean hasProgressFinished() {
@@ -185,13 +203,13 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private boolean outputIsEmpty() {
-        return this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty();
+        return this.itemOutputHandler.getStackInSlot(OUTPUT_SLOT).isEmpty();
     }
 
     private List<TradingMachineRecipe> getCurrentRecipe() {
-        SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
-        for(int i = 0; i < itemHandler.getSlots(); i++) {
-            inventory.setItem(i, this.itemHandler.getStackInSlot(i));
+        SimpleContainer inventory = new SimpleContainer(this.itemInputHandler.getSlots());
+        for(int i = 0; i < itemInputHandler.getSlots(); i++) {
+            inventory.setItem(i, this.itemInputHandler.getStackInSlot(i));
         }
 
         return this.level.getRecipeManager().getRecipesFor(TradingMachineRecipe.Type.INSTANCE, inventory, level);

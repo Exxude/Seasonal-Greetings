@@ -1,3 +1,4 @@
-// 1.20.1	2024-03-29T13:39:46.9233282	Tags for minecraft:block mod id seasonal_greetings
+// 1.20.1	2024-04-01T03:44:27.0411757	Tags for minecraft:block mod id seasonal_greetings
 8362cf86a3095cf0415967418a07878af7652eaa data/seasonal_greetings/tags/blocks/easter_eggs.json
 7244a48fa9cfcd4d01f3c4e26ebb83c7ab572b0f data/seasonal_greetings/tags/blocks/easter_egg_spawnables.json
+31ada7174d7006384e50c0504974a1f9503e2ccf data/seasonal_greetings/tags/blocks/easter_island_grass.json

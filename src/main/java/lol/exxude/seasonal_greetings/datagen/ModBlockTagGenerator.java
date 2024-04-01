@@ -40,5 +40,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(TagEntry.tag(new ResourceLocation("minecraft:deepslate_ore_replaceables")));
         this.tag(ModTags.Blocks.EASTER_EGG_SPAWNABLES)
                 .add(Blocks.NETHERRACK);
+
+        this.tag(ModTags.Blocks.EASTER_ISLAND_GRASS)
+                .add(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get())
+                .add(ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.get());
     }
 }

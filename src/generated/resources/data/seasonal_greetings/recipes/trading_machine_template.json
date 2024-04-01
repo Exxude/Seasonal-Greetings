@@ -2,23 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:diamond"
-    },
-    "C": {
-      "item": "minecraft:iron_block"
+    "N": {
+      "item": "minecraft:netherite_ingot"
     },
     "S": {
-      "item": "seasonal_greetings:trading_machine_template"
+      "item": "seasonal_greetings:trading_machine_template_shard"
     }
   },
   "pattern": [
-    "#S#",
-    "#C#",
-    "###"
+    " S ",
+    "SNS",
+    " S "
   ],
   "result": {
-    "count": 2,
     "item": "seasonal_greetings:trading_machine_template"
   },
   "show_notification": true

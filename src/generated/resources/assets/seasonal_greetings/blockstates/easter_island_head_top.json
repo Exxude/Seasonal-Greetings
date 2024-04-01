@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "seasonal_greetings:block/easter_island_head_top",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "seasonal_greetings:block/easter_island_head_top"
+    },
+    "facing=south": {
+      "model": "seasonal_greetings:block/easter_island_head_top",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "seasonal_greetings:block/easter_island_head_top",
+      "y": 270
+    }
+  }
+}

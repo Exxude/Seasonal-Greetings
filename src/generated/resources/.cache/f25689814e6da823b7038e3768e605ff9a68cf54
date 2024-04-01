@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-27T02:25:40.6825562	Item Models: seasonal_greetings
+// 1.20.1	2024-04-01T14:15:48.0966714	Item Models: seasonal_greetings
 a1dcf4ccadc842ad0a6c2e315672a3f35a1b7232 assets/seasonal_greetings/models/item/easter_basket.json
 a1dcf4ccadc842ad0a6c2e315672a3f35a1b7232 assets/seasonal_greetings/models/item/easter_basket_wg.json
 d8b98ff71fa8531214f94e8a007b5f4c7c366f4a assets/seasonal_greetings/models/item/easter_carrot_sword.json
@@ -40,3 +40,4 @@ d35b9f7049715ce7497e5bd19fc333134ecc3827 assets/seasonal_greetings/models/item/e
 8655d7a8b3012b49e1ca2f0ab2917373d40b023b assets/seasonal_greetings/models/item/easter_egg_wild.json
 fc50535c5a837708dd713f535a37c6432c5162ee assets/seasonal_greetings/models/item/easter_egg_yellow.json
 8164757e6a44ba6402922bbeb77113c91361a3a4 assets/seasonal_greetings/models/item/trading_machine_template.json
+46e5100edd64b92e0fd80eb7e94c9a32bdf6a74d assets/seasonal_greetings/models/item/trading_machine_template_shard.json

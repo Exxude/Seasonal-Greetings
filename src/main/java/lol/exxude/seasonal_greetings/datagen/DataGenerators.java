@@ -1,7 +1,6 @@
 package lol.exxude.seasonal_greetings.datagen;
 
 import lol.exxude.seasonal_greetings.SeasonalGreetings;
-import lol.exxude.seasonal_greetings.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

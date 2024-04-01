@@ -61,6 +61,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.EASTER_CARROT_SWORD);
         simpleItem(ModItems.TRADING_MACHINE_TEMPLATE);
+        simpleItem(ModItems.TRADING_MACHINE_TEMPLATE_SHARD);
 
         simpleBlockItem(ModBlocks.EASTER_BASKET);
 

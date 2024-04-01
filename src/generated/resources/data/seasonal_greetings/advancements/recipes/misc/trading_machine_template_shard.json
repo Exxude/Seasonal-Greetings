@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_easter_egg_wild": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "seasonal_greetings:easter_egg_wild"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "seasonal_greetings:trading_machine_template_shard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_easter_egg_wild",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "seasonal_greetings:trading_machine_template_shard"
+    ]
+  },
+  "sends_telemetry_event": false
+}

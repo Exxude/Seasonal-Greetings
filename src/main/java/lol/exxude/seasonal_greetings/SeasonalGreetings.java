@@ -6,11 +6,14 @@ import lol.exxude.seasonal_greetings.block.entity.ModBlockEntities;
 import lol.exxude.seasonal_greetings.entity.EndermanListener;
 import lol.exxude.seasonal_greetings.item.ModCreativeModeTabs;
 import lol.exxude.seasonal_greetings.item.ModItems;
+import lol.exxude.seasonal_greetings.painting.ModPaintings;
 import lol.exxude.seasonal_greetings.recipe.ModRecipe;
 import lol.exxude.seasonal_greetings.screen.ModMenuTypes;
 import lol.exxude.seasonal_greetings.screen.TradingMachineScreen;
 import lol.exxude.seasonal_greetings.worldgen.ModFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -42,6 +45,7 @@ public class SeasonalGreetings
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
@@ -87,6 +91,7 @@ public class SeasonalGreetings
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.TRADING_MACHINE_MENU.get(), TradingMachineScreen::new);
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.EASTER_ISLAND_GRASS.get(), RenderType.cutout());
         }
     }
 }

@@ -64,7 +64,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.EASTER_EGG_WILD.get()), has(ModItems.EASTER_EGG_WILD.get()))
                 .save(consumer, "wild_to_" + getItemName(ModItems.EASTER_EGG_GOLDEN.get()));
 
-        copySmithingTemplate(consumer, ModItems.TRADING_MACHINE_TEMPLATE.get(), Items.IRON_BLOCK);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TRADING_MACHINE_TEMPLATE_SHARD.get(), 1)
+                .unlockedBy(getHasName(ModItems.EASTER_EGG_WILD.get()), has(ModItems.EASTER_EGG_WILD.get()))
+                .pattern(" W ")
+                .pattern("WNW")
+                .pattern(" W ")
+                .define('W', ModItems.EASTER_EGG_WILD.get())
+                .define('N', Items.NETHERITE_SCRAP)
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.TRADING_MACHINE_TEMPLATE.get(), 1)
+                .unlockedBy(getHasName(ModItems.TRADING_MACHINE_TEMPLATE_SHARD.get()), has(ModItems.TRADING_MACHINE_TEMPLATE_SHARD.get()))
+                .pattern(" S ")
+                .pattern("SNS")
+                .pattern(" S ")
+                .define('S', ModItems.TRADING_MACHINE_TEMPLATE_SHARD.get())
+                .define('N', Items.NETHERITE_INGOT)
+                .save(consumer);
 
         smithing(consumer, ModItems.TRADING_MACHINE_TEMPLATE.get(), Items.IRON_BLOCK, Items.EMERALD, RecipeCategory.MISC, ModBlocks.TRADING_MACHINE.get().asItem());
 

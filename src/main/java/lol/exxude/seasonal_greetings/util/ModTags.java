@@ -14,6 +14,7 @@ public class ModTags {
         public static final TagKey<Block> EASTER_EGGS = tag("easter_eggs");
         public static final TagKey<Block> EASTER_EGG_SPAWNABLES = tag("easter_egg_spawnables");
         public static final TagKey<Block> ENDERMAN_HOLDABLES = tag("enderman_holdables");
+        public static final TagKey<Block> EASTER_ISLAND_GRASS = tag("easter_island_grass");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(SeasonalGreetings.MOD_ID, name));

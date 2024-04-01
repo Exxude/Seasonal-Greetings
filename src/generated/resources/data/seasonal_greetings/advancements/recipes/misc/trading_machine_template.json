@@ -7,12 +7,12 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_trading_machine_template": {
+    "has_trading_machine_template_shard": {
       "conditions": {
         "items": [
           {
             "items": [
-              "seasonal_greetings:trading_machine_template"
+              "seasonal_greetings:trading_machine_template_shard"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_trading_machine_template",
+      "has_trading_machine_template_shard",
       "has_the_recipe"
     ]
   ],
