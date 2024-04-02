@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:hay_block"
+    },
+    {
+      "item": "seasonal_greetings:easter_egg_light_blue"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "seasonal_greetings:easter_straw_light_blue"
+  }
+}

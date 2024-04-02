@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_easter_egg_black": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "seasonal_greetings:easter_egg_black"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:egg_to_straw_easter_straw_black"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_easter_egg_black",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:egg_to_straw_easter_straw_black"
+    ]
+  },
+  "sends_telemetry_event": false
+}

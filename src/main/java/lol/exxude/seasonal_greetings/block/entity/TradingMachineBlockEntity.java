@@ -15,7 +15,9 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.FurnaceBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.Property;
@@ -123,6 +125,7 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
         };
     }
 
+
     @Override
     public Component getDisplayName() {
         return Component.translatable("block.seasonal_greetings.trading_machine");
@@ -164,7 +167,7 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private void resetProgress() {
-        this.getBlockState().setValue(LIT, false);
+        updateBlockState(false);
         progress = 0;
     }
 
@@ -185,6 +188,7 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
 
         this.itemOutputHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(),
                 this.itemOutputHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
+        updateBlockState(false);
     }
 
     private boolean hasProgressFinished() {
@@ -192,7 +196,7 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private void increaseCraftingProgress() {
-        this.getBlockState().setValue(LIT, true);
+        updateBlockState(true);
         progress++;
     }
 
@@ -217,5 +221,11 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
         }
 
         return this.level.getRecipeManager().getRecipesFor(TradingMachineRecipe.Type.INSTANCE, inventory, level);
+    }
+
+    private void updateBlockState(Boolean lit) {
+        BlockState updatedState = this.getBlockState().setValue(LIT, lit);
+        assert this.level != null;
+        this.level.setBlockAndUpdate(this.getBlockPos(), updatedState);
     }
 }

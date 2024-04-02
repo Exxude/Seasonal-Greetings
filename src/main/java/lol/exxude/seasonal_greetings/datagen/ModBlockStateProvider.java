@@ -83,8 +83,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(ModBlocks.EASTER_BUNNY_NEST_WG.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_BUNNY_NEST.getId().getPath())));
 
 
-        //blockFacesWithItem(ModBlocks.TRADING_MACHINE.get(), ModBlocks.TRADING_MACHINE,
-                //"_front", "_side", "_top");
+        simpleBlockItem(ModBlocks.TRADING_MACHINE.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.TRADING_MACHINE.getId().getPath())));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

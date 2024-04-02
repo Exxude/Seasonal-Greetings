@@ -9,13 +9,13 @@
       "y": 90
     },
     "facing=north,lit=false": {
-      "model": "minecraft:block/furnace"
-    },
-    "facing=north,lit=true": {
       "model": "seasonal_greetings:block/trading_machine"
     },
+    "facing=north,lit=true": {
+      "model": "seasonal_greetings:block/trading_machine_on"
+    },
     "facing=south,lit=false": {
-      "model": "minecraft:block/furnace",
+      "model": "seasonal_greetings:block/trading_machine",
       "y": 180
     },
     "facing=south,lit=true": {

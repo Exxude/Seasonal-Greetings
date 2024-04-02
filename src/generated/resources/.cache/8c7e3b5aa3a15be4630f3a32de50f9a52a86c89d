@@ -1,4 +1,4 @@
-// 1.20.1	2024-04-02T01:36:20.6590967	Block States: seasonal_greetings
+// 1.20.1	2024-04-02T02:48:11.5772203	Block States: seasonal_greetings
 c720b9ec5ffc418f97f3e37afe12e65cd6ce72de assets/seasonal_greetings/blockstates/easter_basket.json
 953e114b6c8f623dca796ecafe8e4460d9e3d330 assets/seasonal_greetings/blockstates/easter_basket_large.json
 953e114b6c8f623dca796ecafe8e4460d9e3d330 assets/seasonal_greetings/blockstates/easter_basket_large_wg.json
@@ -87,8 +87,6 @@ ba3351e37c5ab733cb24c5c15363c20396a63e91 assets/seasonal_greetings/blockstates/e
 f64322bd7d1c8de5ea5f844d9d6305032021bc8a assets/seasonal_greetings/blockstates/easter_straw_wild.json
 73cb29f641ba9a24d058d0b42c60f2955819e9b6 assets/seasonal_greetings/blockstates/easter_straw_yellow.json
 db9444ba6f9a9de39a2fe73c8d6937e4f837bc68 assets/seasonal_greetings/blockstates/easter_stuffed_animal_bunny.json
-3c814b58aaad819e0b3e285df1af1ecaaf3ddc85 assets/seasonal_greetings/blockstates/trading_machine.json
-2d9a0ac7815f2b7605b34b6010fe36223f7f4f78 assets/seasonal_greetings/models/block/trading_machine.json
 0dac3cfb01b07deef789bb09385bd6a9ad1ab4a4 assets/seasonal_greetings/models/item/easter_basket.json
 ee82b7c9d94d07cda0b7a6f589aa5eefe2a23d18 assets/seasonal_greetings/models/item/easter_basket_large.json
 ee82b7c9d94d07cda0b7a6f589aa5eefe2a23d18 assets/seasonal_greetings/models/item/easter_basket_large_wg.json

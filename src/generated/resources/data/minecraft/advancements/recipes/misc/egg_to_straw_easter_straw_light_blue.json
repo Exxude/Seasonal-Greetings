@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_easter_egg_light_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "seasonal_greetings:easter_egg_light_blue"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:egg_to_straw_easter_straw_light_blue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_easter_egg_light_blue",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:egg_to_straw_easter_straw_light_blue"
+    ]
+  },
+  "sends_telemetry_event": false
+}

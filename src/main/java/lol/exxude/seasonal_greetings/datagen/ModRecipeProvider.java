@@ -16,7 +16,9 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Iterator;
 import java.util.List;
@@ -35,6 +37,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             ModItems.EASTER_COTTON_CANDY_CYAN.get(), ModItems.EASTER_COTTON_CANDY_WHITE.get(), ModItems.EASTER_COTTON_CANDY_PINK.get(), ModItems.EASTER_COTTON_CANDY_MAGENTA.get(),
             ModItems.EASTER_COTTON_CANDY_LIGHT_GRAY.get(), ModItems.EASTER_COTTON_CANDY_GRAY.get());
 
+    private static final List<ItemLike> EASTER_STRAW_BLOCKS = List.of(ModBlocks.EASTER_STRAW_RED.get(), ModBlocks.EASTER_STRAW_BLUE.get(),
+            ModBlocks.EASTER_STRAW_GREEN.get(), ModBlocks.EASTER_STRAW_YELLOW.get(), ModBlocks.EASTER_STRAW_ORANGE.get(), ModBlocks.EASTER_STRAW_BLACK.get(),
+            ModBlocks.EASTER_STRAW_PURPLE.get(), ModBlocks.EASTER_STRAW_BROWN.get(), ModBlocks.EASTER_STRAW_LIME.get(), ModBlocks.EASTER_STRAW_LIGHT_BLUE.get(),
+            ModBlocks.EASTER_STRAW_CYAN.get(), ModBlocks.EASTER_STRAW_WHITE.get(), ModBlocks.EASTER_STRAW_PINK.get(), ModBlocks.EASTER_STRAW_MAGENTA.get(),
+            ModBlocks.EASTER_STRAW_LIGHT_GRAY.get(), ModBlocks.EASTER_STRAW_GRAY.get());
+
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -52,6 +60,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .requires(EASTER_EGGS.get(i)).requires(ModItems.EASTER_EGG_WILD.get())
                     .unlockedBy(getHasName(EASTER_EGGS.get(i)), has(EASTER_EGGS.get(i)))
                     .save(consumer, "wild_triple_" + getItemName(EASTER_EGGS.get(i)));
+
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EASTER_STRAW_BLOCKS.get(i), 4)
+                    .requires(Items.HAY_BLOCK).requires(EASTER_EGGS.get(i))
+                    .unlockedBy(getHasName(EASTER_EGGS.get(i)), has(EASTER_EGGS.get(i)))
+                    .save(consumer, "egg_to_straw_" + getItemName(EASTER_STRAW_BLOCKS.get(i)));
         }
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.EASTER_EGG_WILD.get(), 9)
