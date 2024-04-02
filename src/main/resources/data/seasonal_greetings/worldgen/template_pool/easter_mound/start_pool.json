@@ -1,0 +1,81 @@
+{
+  "name": "seasonal_greetings:easter_mound/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "seasonal_greetings:easter_mound_five",
+            "processors": "seasonal_greetings:easter_eggs_on_mound"
+          }
+        ]
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "seasonal_greetings:easter_mound_four",
+            "processors": "seasonal_greetings:easter_eggs_on_mound"
+          }
+        ]
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "seasonal_greetings:easter_mound_one",
+            "processors": "seasonal_greetings:easter_eggs_on_mound"
+          }
+        ]
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "seasonal_greetings:easter_mound_two",
+            "processors": "seasonal_greetings:easter_eggs_on_mound"
+          }
+        ]
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "seasonal_greetings:easter_mound_three",
+            "processors": "seasonal_greetings:easter_eggs_on_mound"
+          }
+        ]
+      }
+    }
+  ]
+}

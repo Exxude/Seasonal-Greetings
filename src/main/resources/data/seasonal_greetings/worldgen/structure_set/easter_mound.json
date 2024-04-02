@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "seasonal_greetings:easter_mound",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 5185431215,
+    "spacing": 25,
+    "separation": 15,
+    "type": "minecraft:random_spread"
+  }
+}
