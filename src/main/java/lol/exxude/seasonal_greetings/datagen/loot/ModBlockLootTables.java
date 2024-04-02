@@ -45,6 +45,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             ModItems.EASTER_EGG_CYAN.get(), ModItems.EASTER_EGG_WHITE.get(), ModItems.EASTER_EGG_PINK.get(), ModItems.EASTER_EGG_MAGENTA.get(),
             ModItems.EASTER_EGG_LIGHT_GRAY.get(), ModItems.EASTER_EGG_GRAY.get(), ModItems.EASTER_EGG_WILD.get(), ModItems.EASTER_EGG_GOLDEN.get());
 
+    private static final List<Block> EASTER_STRAW_BLOCKS = List.of(ModBlocks.EASTER_STRAW_BLACK.get(), ModBlocks.EASTER_STRAW_BLUE.get(),
+            ModBlocks.EASTER_STRAW_BROWN.get(), ModBlocks.EASTER_STRAW_CYAN.get(), ModBlocks.EASTER_STRAW_GOLDEN.get(), ModBlocks.EASTER_STRAW_GRAY.get(),
+            ModBlocks.EASTER_STRAW_GREEN.get(), ModBlocks.EASTER_STRAW_LIGHT_BLUE.get(), ModBlocks.EASTER_STRAW_LIGHT_GRAY.get(), ModBlocks.EASTER_STRAW_LIME.get(),
+            ModBlocks.EASTER_STRAW_MAGENTA.get(), ModBlocks.EASTER_STRAW_ORANGE.get(), ModBlocks.EASTER_STRAW_PINK.get(), ModBlocks.EASTER_STRAW_PURPLE.get(),
+            ModBlocks.EASTER_STRAW_RED.get(), ModBlocks.EASTER_STRAW_WHITE.get(), ModBlocks.EASTER_STRAW_WILD.get(), ModBlocks.EASTER_STRAW_YELLOW.get());
+
+
     private static final List<Block> EASTER_EGG_BLOCKS_HELD = List.of(ModBlocks.EASTER_EGG_BLACK_BLOCK_HELD.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_HELD.get(),
             ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL_HELD.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL_HELD.get(),
             ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE_HELD.get(), ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE_HELD.get());
@@ -62,7 +69,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.EASTER_BASKET.get());
         this.dropSelf(ModBlocks.EASTER_BASKET_MEDIUM.get());
         this.dropSelf(ModBlocks.EASTER_BASKET_LARGE.get());
-        this.dropSelf(ModBlocks.EASTER_STRAW.get());
         this.dropSelf(ModBlocks.EASTER_BUNNY_NEST.get());
         this.dropSelf(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get());
 
@@ -102,6 +108,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
             int index = i;
             this.add(EASTER_EGG_BLOCKS_HELD.get(index),
                     block -> createEggBlockDropNoSilk(EASTER_EGG_BLOCKS_DROP.get(index).asItem()));
+        }
+
+        for(int i = 0; i < EASTER_STRAW_BLOCKS.size(); i++) {
+            int index = i;
+            this.add(EASTER_STRAW_BLOCKS.get(index),
+                    block -> createDropSelf(EASTER_STRAW_BLOCKS.get(index)));
         }
 
         this.add(ModBlocks.EASTER_BASKET_WG.get(), block -> LootTable.lootTable()
@@ -220,6 +232,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     protected LootTable.Builder createSelfSilked(Block silkedDrop) {
         return LootTable.lootTable().withPool(LootPool.lootPool().when(HAS_SILK_TOUCH).add(LootItem.lootTableItem(silkedDrop)));
+    }
+
+    protected LootTable.Builder createDropSelf(Block drop) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(drop)));
     }
 
     @Override

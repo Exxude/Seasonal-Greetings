@@ -32,6 +32,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.EASTER_EGG_LIGHT_GRAY_BLOCK_THRICE, ModBlocks.EASTER_EGG_GRAY_BLOCK_THRICE, ModBlocks.EASTER_EGG_WILD_BLOCK_THRICE, ModBlocks.EASTER_EGG_GOLDEN_BLOCK_THRICE
     );
 
+    private static final List<RegistryObject<Block>> EASTER_STRAW_BLOCKS = List.of(ModBlocks.EASTER_STRAW_BLACK, ModBlocks.EASTER_STRAW_BLUE,
+            ModBlocks.EASTER_STRAW_BROWN, ModBlocks.EASTER_STRAW_CYAN, ModBlocks.EASTER_STRAW_GOLDEN, ModBlocks.EASTER_STRAW_GRAY,
+            ModBlocks.EASTER_STRAW_GREEN, ModBlocks.EASTER_STRAW_LIGHT_BLUE, ModBlocks.EASTER_STRAW_LIGHT_GRAY, ModBlocks.EASTER_STRAW_LIME,
+            ModBlocks.EASTER_STRAW_MAGENTA, ModBlocks.EASTER_STRAW_ORANGE, ModBlocks.EASTER_STRAW_PINK, ModBlocks.EASTER_STRAW_PURPLE,
+            ModBlocks.EASTER_STRAW_RED, ModBlocks.EASTER_STRAW_WHITE, ModBlocks.EASTER_STRAW_WILD, ModBlocks.EASTER_STRAW_YELLOW);
+
     private static final List<RegistryObject<Block>> EASTER_EGG_BLOCKS_HELD = List.of(ModBlocks.EASTER_EGG_BLACK_BLOCK_HELD, ModBlocks.EASTER_EGG_PURPLE_BLOCK_HELD, ModBlocks.EASTER_EGG_BLACK_BLOCK_DUAL_HELD, ModBlocks.EASTER_EGG_PURPLE_BLOCK_DUAL_HELD,
             ModBlocks.EASTER_EGG_BLACK_BLOCK_THRICE_HELD, ModBlocks.EASTER_EGG_PURPLE_BLOCK_THRICE_HELD);
 
@@ -42,13 +48,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for(int i = 0; i < EASTER_EGG_BLOCKS_HELD.size(); i++) {
-            int index = i;
-            customBlockWithItem(EASTER_EGG_BLOCKS_HELD.get(index).get(), EASTER_EGG_BLOCKS_HELD.get(index), "enderman_held/");
+            customBlockWithItem(EASTER_EGG_BLOCKS_HELD.get(i).get(), EASTER_EGG_BLOCKS_HELD.get(i), "enderman_held/");
         }
 
         for(int i = 0; i < EASTER_EGG_BLOCKS.size(); i++) {
-            int index = i;
-            customBlockWithItem(EASTER_EGG_BLOCKS.get(index).get(), EASTER_EGG_BLOCKS.get(index), "");
+            customBlockWithItem(EASTER_EGG_BLOCKS.get(i).get(), EASTER_EGG_BLOCKS.get(i), "");
+        }
+
+        for(int i = 0; i < EASTER_STRAW_BLOCKS.size(); i++) {
+            customBlockWithItem(EASTER_STRAW_BLOCKS.get(i).get(), EASTER_STRAW_BLOCKS.get(i), "");
         }
 
         customBlockWithItem(ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY.get(), ModBlocks.EASTER_STUFFED_ANIMAL_BUNNY, "");
@@ -70,14 +78,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(ModBlocks.EASTER_ISLAND_GRASS_BLOCK.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_ISLAND_GRASS_BLOCK.getId().getPath())));
         simpleBlockItem(ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.getId().getPath())));
         simpleBlockItem(ModBlocks.EASTER_ISLAND_GRASS.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_ISLAND_GRASS.getId().getPath())));
-        simpleBlockItem(ModBlocks.EASTER_STRAW.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_STRAW.getId().getPath())));
 
         simpleBlockItem(ModBlocks.EASTER_BUNNY_NEST.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_BUNNY_NEST.getId().getPath())));
         simpleBlockItem(ModBlocks.EASTER_BUNNY_NEST_WG.get(), new ModelFile.UncheckedModelFile(modLoc("block/" + ModBlocks.EASTER_BUNNY_NEST.getId().getPath())));
 
 
-        blockFacesWithItem(ModBlocks.TRADING_MACHINE.get(), ModBlocks.TRADING_MACHINE,
-                "_front", "_side", "_top");
+        //blockFacesWithItem(ModBlocks.TRADING_MACHINE.get(), ModBlocks.TRADING_MACHINE,
+                //"_front", "_side", "_top");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

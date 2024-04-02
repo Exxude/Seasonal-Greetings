@@ -27,7 +27,24 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.EASTER_ISLAND_GRASS_BLOCK_FULL.get());
                         pOutput.accept(ModBlocks.EASTER_ISLAND_GRASS.get());
                         pOutput.accept(ModBlocks.EASTER_ISLAND_HEAD.get());
-                        pOutput.accept(ModBlocks.EASTER_STRAW.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_BLACK.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_BLUE.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_BROWN.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_CYAN.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_GOLDEN.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_GRAY.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_GREEN.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_LIGHT_BLUE.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_LIGHT_GRAY.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_LIME.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_MAGENTA.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_ORANGE.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_PINK.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_PURPLE.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_RED.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_WHITE.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_WILD.get());
+                        pOutput.accept(ModBlocks.EASTER_STRAW_YELLOW.get());
 
                         pOutput.accept(ModItems.EASTER_EGG_RED.get());
                         pOutput.accept(ModItems.EASTER_EGG_BLUE.get());

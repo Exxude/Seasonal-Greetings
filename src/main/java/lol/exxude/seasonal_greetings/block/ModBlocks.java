@@ -2,21 +2,19 @@ package lol.exxude.seasonal_greetings.block;
 
 import lol.exxude.seasonal_greetings.SeasonalGreetings;
 import lol.exxude.seasonal_greetings.block.custom.*;
+import lol.exxude.seasonal_greetings.block.custom.easter.*;
 import lol.exxude.seasonal_greetings.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -189,7 +187,41 @@ public class ModBlocks {
     public static final RegistryObject<Block> EASTER_BUNNY_NEST_WG = registerBlock("easter_bunny_nest_wg",
             () -> new EasterBunnyNestBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion().noLootTable()));
 
-    public static final RegistryObject<Block> EASTER_STRAW = registerBlock("easter_straw",
+    public static final RegistryObject<Block> EASTER_STRAW_BLACK = registerBlock("easter_straw_black",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_BLUE = registerBlock("easter_straw_blue",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_BROWN = registerBlock("easter_straw_brown",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_CYAN = registerBlock("easter_straw_cyan",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_GOLDEN = registerBlock("easter_straw_golden",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_GRAY = registerBlock("easter_straw_gray",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_GREEN = registerBlock("easter_straw_green",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_LIGHT_BLUE = registerBlock("easter_straw_light_blue",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_LIGHT_GRAY = registerBlock("easter_straw_light_gray",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_LIME = registerBlock("easter_straw_lime",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_MAGENTA = registerBlock("easter_straw_magenta",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_ORANGE = registerBlock("easter_straw_orange",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_PINK = registerBlock("easter_straw_pink",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_PURPLE = registerBlock("easter_straw_purple",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_RED = registerBlock("easter_straw_red",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_WHITE = registerBlock("easter_straw_white",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_WILD = registerBlock("easter_straw_wild",
+            () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> EASTER_STRAW_YELLOW = registerBlock("easter_straw_yellow",
             () -> new EasterStraw(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).noOcclusion()));
 
 

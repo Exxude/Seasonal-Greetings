@@ -13,11 +13,12 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -44,6 +45,8 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
             saveAdditional(saveWithFullMetadata());
         }
     };
+
+    public static final Property<Boolean> LIT = BlockStateProperties.LIT;
 
     private static final int INPUT_SLOT = 0;
     private static final int CATALYST_SLOT = 1;
@@ -151,7 +154,6 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
         if(hasRecipe()) {
             increaseCraftingProgress();
             setChanged(pLevel, pPos, pState);
-
             if(hasProgressFinished()) {
                 craftItem();
                 resetProgress();
@@ -162,6 +164,7 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private void resetProgress() {
+        this.getBlockState().setValue(LIT, false);
         progress = 0;
     }
 
@@ -189,6 +192,7 @@ public class TradingMachineBlockEntity extends BlockEntity implements MenuProvid
     }
 
     private void increaseCraftingProgress() {
+        this.getBlockState().setValue(LIT, true);
         progress++;
     }
 

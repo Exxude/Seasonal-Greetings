@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "seasonal_greetings:block/easter_straw_black",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "seasonal_greetings:block/easter_straw_black"
+    },
+    "facing=south": {
+      "model": "seasonal_greetings:block/easter_straw_black",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "seasonal_greetings:block/easter_straw_black",
+      "y": 270
+    }
+  }
+}
